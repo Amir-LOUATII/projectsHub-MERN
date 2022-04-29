@@ -9,6 +9,7 @@ import Loading from "../UI/Loading";
 
 const Home = () => {
   const { user } = useAuthContext();
+  const [isProjecstEmpty, setIsprojectsEmpty] = useState(null);
   const {
     projects,
     tags,
@@ -28,6 +29,12 @@ const Home = () => {
       updateTags([]);
     };
   }, []);
+
+  useEffect(() => {
+    if (projects.length) {
+      setIsprojectsEmpty(false);
+    } else setIsprojectsEmpty(true);
+  }, [projects]);
   const checkHandler = (e) => {
     const value = e.target.value;
     if (tags.includes(value)) {
@@ -39,6 +46,7 @@ const Home = () => {
       updateTags(newState);
     }
   };
+
   if (isPending) {
     return <Loading />;
   }
@@ -102,7 +110,12 @@ const Home = () => {
       </div>
       <Container className="pt-3 px-0 pb-3">
         <Row className="justify-content-start gy-4">
-          {!filteredProjects.length && success && (
+          {!projects.length && success && (
+            <h1 className="h2  text-muted text-center">
+              No submitted projects.
+            </h1>
+          )}
+          {!filteredProjects.length && success && !isProjecstEmpty && (
             <h1 className="h2  text-muted text-center">
               No project matched you search.
             </h1>
