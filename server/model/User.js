@@ -59,9 +59,10 @@ UserSchema.virtual("projects", {
 });
 
 UserSchema.post("remove", async function () {
-  const project = this.model("Project").find({ createdBy: this._id });
-  project.forEach((project) => {
-    project.remove();
-  });
+  this.model("Project").deleteMany({ createdBy: this._id });
+  this.model("Comment").deleteMany({ createdBy: this._id });
+  this.model("Like").deleteMany({ createdBy: this._id });
+  this.model("Follower").deleteMany({ follower: this._id });
+  this.model("Follower").deleteMany({ followee: this._id });
 });
 module.exports = mongoose.model("User", UserSchema);
