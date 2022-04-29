@@ -9,7 +9,9 @@ const reducer = (state, action) => {
 
       if (state.searchTerm) {
         tempUsers = tempUsers.filter((user) => {
-          return user.name.includes(state.searchTerm);
+          return user.name
+            .toLowerCase()
+            .includes(state.searchTerm.toLowerCase());
         });
       }
       return { ...state, filteredUsers: tempUsers };
