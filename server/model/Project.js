@@ -60,13 +60,7 @@ ProjectSchema.post("save", async function () {
 
 ProjectSchema.post("remove", async function () {
   await this.constructor.getNumberOfProject(this.createdBy);
-  const likes = await this.model("Like").find({ project: this._id });
-  likes.forEach((like) => {
-    like.remove();
-  });
-  const comments = await this.model("Comment").find({ project: this._id });
-  comments.forEach((comment) => {
-    comment.remove();
-  });
+  await this.model("Like").deleteMany({ project: this._id });
+  await this.model("Comment").deleteMany({ project: this._id });
 });
 module.exports = mongoose.model("Project", ProjectSchema);
