@@ -1,0 +1,42 @@
+.nav {
+  position: relative;
+  background-color: var(--bg-color);
+}
+.logo {
+  font-family: "kaushan Script", "cursive";
+  font-size: 25px;
+  color: black !important;
+}
+
+.btn {
+  color: var(--heading-color);
+  border-color: var(--heading-color);
+  background-color: transparent;
+}
+
+.btn:hover,
+.btn:active,
+.btn:disabled,
+.btn:focus {
+  background-color: white;
+  color: black;
+  outline: none;
+  box-shadow: none !important;
+  border-color: black !important;
+  transition: 0.3s;
+}
+@media (max-width: 767px) {
+  .btn {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    transform: translate(-50%, 50%);
+  }
+}
+.btn:active {
+  border: none;
+}
+
+.hub {
+  color: var(--primary-color);
+}

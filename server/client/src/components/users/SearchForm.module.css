@@ -1,0 +1,6 @@
+.form:focus{box-shadow: none;outline: none !important;}
+
+
+.icon-text{background-color:var(--primary-color) !important; cursor:not-allowed}
+
+.icon{color:white}

@@ -1,0 +1,100 @@
+.img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid var(--primary-color);
+}
+
+.name {
+  white-space: nowrap !important;
+}
+
+.box {
+  height: 120px;
+  position: relative;
+  cursor: pointer;
+}
+
+.last {
+  cursor: default;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 4px;
+  transition: 0.3s;
+  background-color: var(--primary-color);
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 0;
+  width: 4px;
+  transition: 0.3s;
+  background-color: var(--primary-color);
+}
+
+.box:hover::before {
+  height: 100%;
+}
+
+.box:hover::after {
+  height: 100%;
+}
+
+.underline {
+  height: 3px;
+  width: 120px;
+  background-color: var(--primary-color);
+}
+
+.btn,
+.btn:active,
+.btn:focus,
+.btn:disabled {
+  background-color: var(--primary-color) !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+
+.file{
+  position: absolute;
+   top: 50%;
+  right: 0;
+  transform: translateY(100%);
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+
+}
+
+.changePhotoIcon{position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(100%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color:#f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.changePhotoIcon svg{font-size: 22px;}

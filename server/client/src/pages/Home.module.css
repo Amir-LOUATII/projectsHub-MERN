@@ -1,0 +1,16 @@
+.btn,
+.btn:active,
+.btn:hover {
+  background-color: #c3b8e2 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.active,
+.btn:focus {
+  background-color: var(--primary-color) !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}

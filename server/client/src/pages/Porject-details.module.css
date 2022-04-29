@@ -1,0 +1,14 @@
+.project-details {
+  min-height: calc(100vh - 250px);
+}
+
+.btn {
+  background-color: var(--primary-color);
+  width: fit-content !important;
+  color: white;
+}
+
+.edit:hover {
+  text-decoration: underline !important;
+  cursor: pointer;
+}

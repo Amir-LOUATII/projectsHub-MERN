@@ -1,0 +1,27 @@
+.details {
+  background-color: var(--primary-color) !important;
+  color: white;
+  width: fit-content !important;
+ 
+}
+
+.card {
+  min-height: 320px !important;
+  position: relative;
+}
+
+.link:hover {
+  text-decoration: underline !important;
+}
+
+.trash-icon {
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+
+
+
+
+

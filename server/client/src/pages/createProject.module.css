@@ -1,0 +1,32 @@
+.btn,
+.btn:active,
+.btn:focus,
+.btn:disabled {
+  background-color: var(--primary-color) !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+input:focus{
+  box-shadow: none !important;
+  border-color: var(--primary-color) !important;
+}
+textarea:focus{
+  box-shadow: none !important;
+  border-color: var(--primary-color) !important;
+}
+.select-container  {
+  box-shadow: none !important;
+  border-color: var(--primary-color) !important;
+  outline-color: var(--primary-color) !important;
+}
+
+.select--control:focus{
+   box-shadow: none !important;
+  border-color: var(--primary-color) !important;
+  outline-color: var(--primary-color) !important;
+}

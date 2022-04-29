@@ -1,0 +1,56 @@
+.sidebar {
+  color: white;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    height: 100px !important;
+    max-height: 300px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 0 !important;
+  }
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.name {
+  font-family: "kaushan Script", "cursive";
+  color: black;
+}
+
+.active {
+  color: purple !important;
+}
+
+.job {
+  font-size: 10px;
+  white-space: nowrap !important;
+  margin: 0 !important;
+}
+
+.online-img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.online {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #0ebb50;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-12px, -50%);
+}
+

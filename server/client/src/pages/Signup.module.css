@@ -1,0 +1,25 @@
+.btn,
+.btn:active,
+.btn:focus,
+.btn:hover {
+  background-color: var(--primary-color);
+  width: fit-content !important;
+  color: white;
+  border: none;
+}
+
+.btn:disabled {
+  background-color: #a99ec5;
+  cursor: not-allowed;
+}
+
+
+.form{width: 100% !important;}
+
+
+@media(min-width:767px){
+  .form{width: 75% !important;}
+}
+@media(min-width:991px){
+  .form{width: 50% !important;}
+}

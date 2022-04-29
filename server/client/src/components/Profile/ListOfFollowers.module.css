@@ -1,0 +1,10 @@
+.close-btn,
+.close-btn:active,
+.close-btn:focus,
+.close-btn:hover {
+  background-color: rgb(197, 136, 197) !important;
+  width: fit-content !important;
+  color: white;
+  border: none;
+  box-shadow: none !important;
+}
