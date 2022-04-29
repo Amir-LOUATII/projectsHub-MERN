@@ -57,4 +57,11 @@ UserSchema.virtual("projects", {
   foreignField: "createdBy",
   justOne: false,
 });
+
+UserSchema.post("remove", async function () {
+  const project = this.model("Project").find({ createdBy: this._id });
+  project.forEach((project) => {
+    project.remove();
+  });
+});
 module.exports = mongoose.model("User", UserSchema);
