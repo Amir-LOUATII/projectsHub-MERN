@@ -19,6 +19,7 @@ const getSingleProject = async (req, res) => {
     path: "createdBy",
     select: "name image _id",
   });
+  // check if the project exist
   if (!project) {
     throw new CustomAPIError.NotFoundError("there is no project with this id");
   }
@@ -56,9 +57,11 @@ const createProject = async (req, res) => {
   };
 
   const project = await Project.create(newProject);
+  // get screenshot
   const screenShot = await urlScreenShot(siteURL, projectName);
   project.screenShot = screenShot;
   project.save();
+
   res.status(StatusCodes.CREATED).json({ project });
 };
 
